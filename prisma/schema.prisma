@@ -1,0 +1,22 @@
+// -----  Database ----- \\
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:database.db"
+}
+
+// ----- Generator ----- \\
+
+generator client {
+  provider = "prisma-client-py"
+}
+
+// ---- Data Models ---- \\
+
+model Human {
+  id            Int     @id
+  is_alive      Boolean
+  virgin        Boolean
+  rickroller    Boolean
+  barfday       DateTime
+}
